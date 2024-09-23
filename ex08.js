@@ -1,7 +1,15 @@
-// Exercise 8: Write a function named 'longestWord' that takes a string of text and returns the longest word in the string.
+// Exercise 8: Write a function named 'longestWord' that takes a string of text 
+//and returns the longest word in the string.
 
 function longestWord(text) {
-  // your code here
+  let newTextArr = text.split(" ")
+  let word = ""
+  for(let i =0; i < newTextArr.length; i++){
+    if(word.length <= newTextArr[i].length){
+      word = newTextArr[i]
+    }
+  }
+  return word
 }
 
-console.error.longestWord('The quick brown fox jumps over the lazy dog') // 'jumps'
+console.log(longestWord('The quick brown fox jumps over the lazy dog')) // 'jumps'
