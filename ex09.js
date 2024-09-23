@@ -1,7 +1,9 @@
-// Exercise 9: Write a function named 'flattenArray' that takes an array of nested arrays and returns a single flattened array.
+// Exercise 9: Write a function named 'flattenArray' that takes an array of nested 
+// arrays and returns a single flattened array.
 
 function flattenArray(arr) {
-  // your code here
+  let newArr = arr.flat()
+  return  newArr.flat()
 }
 
 console.log(flattenArray([[1, 2], [3, 4], [5, [6, 7]]])) // [1, 2, 3, 4, 5, 6, 7]
