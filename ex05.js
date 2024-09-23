@@ -4,14 +4,15 @@
 function groupByCategory(products) {
   let obj ={}
   for(let i =0; i < products.length; i++){
-    if(obj.keys != 1){
-      obj[products[i].category]
-    }else if(!products[i].category in obj.keys){
-      obj[products[i].category]
+    if(obj[products[i].category] === undefined){
+      obj[products[i].category] = []
     }
-    obj[products[i].category]+=[(products[i].name +" "+products[i].category)]
+    obj[products[i].category].push({
+      name: products[i].name,
+      category: products[i].category
+    })
   }
-  console.log(obj)
+  return obj
 }
-
-console.log(groupByCategory([{ name: 'Apple', category: 'Fruit' }, { name: 'Carrot', category: 'Vegetable' }, { name: 'Banana', category: 'Fruit' }])) // { Fruit: [{ name: 'Apple', category: 'Fruit' }, { name: 'Banana', category: 'Fruit' }], Vegetable: [{ name: 'Carrot', category: 'Vegetable' }] }
+// { Fruit: [{ name: 'Apple', category: 'Fruit' }, { name: 'Banana', category: 'Fruit' }], Vegetable: [{ name: 'Carrot', category: 'Vegetable' }] }
+console.log(groupByCategory([{ name: 'Apple', category: 'Fruit' }, { name: 'Carrot', category: 'Vegetable' }, { name: 'Banana', category: 'Fruit' }])) 
