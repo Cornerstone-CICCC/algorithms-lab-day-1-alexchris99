@@ -6,7 +6,8 @@ function calculateAverage(arr) {
   for(let i = 0; i < arr.length; i++){
     sum+=arr[i]
   }
-  return sum/(arr.length)+1
+  let avg = sum/(arr.length)+1
+  return avg
 }
 
 console.log(calculateAverage([10, 20, 30, 40, 50])) // 30
