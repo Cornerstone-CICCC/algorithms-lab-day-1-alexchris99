@@ -8,4 +8,5 @@ function formatDate(dateStr) {
   return months[parseInt(date[1])-1] +" " + date[2]+"," +" " + date[0]
 }
 
+
 console.log(formatDate('2022-01-01')) // 'January 1, 2022'
